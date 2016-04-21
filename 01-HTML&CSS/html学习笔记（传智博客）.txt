@@ -1,0 +1,198 @@
+前六天的视频笔记（后补的）
+ 标记分为
+  ---双标记
+      --无属性的双标记<title>..</title>
+  ---单标记
+      --有属性的单标记 <hr/>  
+         属性 noshade在xhtml中 noshade="noshade" 在html中写noshade即可
+
+      --无属性的单标记 <br/> 
+  ---几个特殊标记
+     <blockquote>
+     <pre>
+
+SP6 html列表与图片应用
+  1.<ul>...</ul>无序  属性值有disc（默认值是实心圆）,circle,square 序列号的形状
+     <ul type="">
+       <li type="" >...</li>
+     </ul>	
+  2.<ol>...</ol>有序
+      <li type="a" start="20">...</li>
+        
+  3.<dl>...</dl>定义列表
+      <dl>
+        <dt>笔记本</dt> 
+		<dd>联想</dd>	
+		<dd>戴尔</dd>	
+	        <dd>华硕</dd>	
+      </dl>  
+  4.web支持的图片格式
+     GIF（图形交换格式）
+     JPEG=JPG（联合图像专家组）高度压缩
+     PNG（网络可移植格式）
+
+     <img src="图片的路径">
+        绝对路径
+	相对路径：从当前文档开始的路径
+
+SP7 html 阶段实战 新闻页面
+
+SP8 html 表格应用基础
+
+SP9 hao123首页仿写上
+1.一行三列的表格------日期
+   <td></td>之间没有内容时，默认不显示边框，如果想看到加个空格转义符&nbsp
+2.两行三列的表格-----LOGO+searvh
+   一行三列
+   第二，三列嵌套表格两行一列
+3.table的一些属性
+    属性名称   属性值
+     frame      void  边框线
+     rules      none  表格内部的线 
+
+SP10 hao123首页仿写下
+ 1.表格的标题 
+     <caption>...</caption>
+ 2.表格的结构化
+     表头区<thead></thead> 
+     表体区<tbody></tbody> 
+     表尾区<tfoot></tfoot> 
+ 3.表格的直列化
+      <colgroup> < /colgroup>默认控制第一列
+      span  bgcolor
+
+      控制二列
+      <colgroup span=“2”> < /colgroup>
+      <colgroup bgcolor=“red”> < /colgroup>
+	   
+
+SP11 html超链接应用
+  1.<a > </a>
+     属性:
+      href="连接目标"
+      title=
+   ***target= _self 默认在自身窗口打开
+              _blank 在新窗口
+	      _parent 在上一级窗口打开
+	      _top
+  2.链接分类（链接重要的使用原则，必须是回路，有去有回）
+        （1）站内链接 只写网页名称即可 
+	（2）站外链接 
+	（3）邮箱链接 
+	（4）锚点链接 ----可以跳转到 某个页面的某个位置
+	     创建描点<a name="锚点名称">显示内容</a>
+	     链接锚点<a href="#锚点名称">显示内容</a>
+	     -----跳到某个页面的某个位置
+	     <a href="锚点链接.html#锚点名称">显示内容</a>
+        （5）空连接 ----实现一些特效 	
+	    <a href="#" onclick="">
+	    例如：添加收藏,设为首页的特效功能
+        （6）脚本链接
+	      是一种特殊的链接，当单击设置脚本链接的文本或图片是可以运行相应的javascript语句  
+	      <a href="javascript:window.open('http://www.baidu.com')">打开窗口</>
+
+SP12 html表单应用--双标签--  客户端与服务器端之间传递数据的通道---表单
+ 
+  1.它是一个容器，用于包含其他表单元素
+	  <form action=url（传送目标，处理表单信息的服务器端应用程序）
+		method=处理表单数据的方式get或者post默认get
+		name=表单名称>
+	  </form>
+
+	  get方法将值附加到请求该页的URL中，适合传递少量信息
+	  post方法可以传递大量信息
+
+  2.网页如何去排版
+       传统通过table进行排版
+       现在xhtml+css布局
+
+       布局核心思想过程
+          --分析页面结构图
+	  --选择合适标签来规划我们的内容
+	  --再通过css来控制这些内容样式
+ 3. 浏览器与服务器之间
+     先找到服务器 三次握手
+   
+SP13 html表单详情
+  1.用户注册页面 
+      ---<form>...</form> 表单用于向服务器传输数据。
+           <form action="ok.html" method="post"></form> 
+
+      ---<input>...</input>  标签用于搜集用户信息。
+          type和name属性是必要的
+          type: button--onclick
+		checkbox--
+		file--
+		hidden
+		image
+		password--
+		radio--
+		reset--
+		submit--
+		text--
+	  value 初始值的设置
+	  maxlength 最多容纳的字符数
+	  size  显示的字符数
+	  readonly
+	  disabled 
+     ----<label> 标签为 input 元素定义标注（标记）
+     ----<select name="城市">
+	  <option value ="邯郸">邯郸</option>
+	  <option value ="北京">北京</option>
+	  <option value="石家庄">石家庄</option>
+         </select>
+     ----<textarea >..</textarea >
+          属性：name
+	        cols
+		rows
+     ----<filedset></filedset>
+          <legend></legend>
+
+ SP14 html多媒体
+     ----table和colgroup结合使用会可以出一些效果
+     ----html里还可以放置视频，音频等多媒体元素
+        
+        1.flash动画的插入
+	   <embed src=""> </embed>
+	   通过dw自动生成代码<object>
+	   wmode=transparent 使flash背景透明
+        2.<marquee>滚动文字</marquee>
+	   注：有些浏览器对它的支持不好
+	   滚动方向 direction
+	   滚动方式 behavior 
+	   滚动的循环次数 loop
+	   背景颜色 bgcolor
+	   scrollamount
+	   scrolldelay
+	   onmouseover="this.stop"
+SP15 html框架技术
+    ----先做主框架文件 126.html
+    ----再分别制作，被包含文件 left.html和right.html
+    ----再通过框架技术，将left和right包含在126中
+    
+    ----<frameset cols="25%,50%,25%">
+
+	  <frame src="/example/html/frame_a.html">
+	  <frame src="/example/html/frame_b.html">
+	  <frame src="/example/html/frame_c.html">
+
+	</frameset>
+
+    ----iframe 元素会创建包含另外一个文档的内联框架（即行内框架）。
+        在原网页中嵌入另一个网页
+    ----从html到xhtml
+        2008 html5
+	---什么是xhtml
+	   比html要求更加严格
+	   浏览器之间的差异
+	---DOCTYPE是document type的简写主要用来说明你用的xhtml或者html是什么版本，
+	   浏览器根据你的DOCTYPE来解释页面代码，并展示出来
+           ---xhtml1.0提供了三种DTD声明可供选择
+	      1.过渡的(Transitional)
+	      2.严格的(strict)
+	      3.框架的(frameset)
+
+
+补充：
+1.有四种属性可以在所有HTML标签中使用
+   id　name class style
